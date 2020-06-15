@@ -67,18 +67,52 @@ elif answer == "n":
     print("Too bad.")
     time.sleep(1)
 
-
+def room_kitchen():
+  print("You are standing in the Kitchen.")
+def room_kitchenstorage():
+  print("You are standing in the Kitchen Storage.")
 def room_northhall():
-  print("north")
+  print("As you open the door, you can see a bunch of centipedes running away towards the darkness...")
+  time.sleep(3)
+  print("You are standing in the North Hall.")
+  time.sleep(2)
+  print("Where do you want to go?")
+  print("Type: 'n', 'e' or 's'(sleeping quarters)(or 'q' to quit).")
+  answer = input()
+  if answer == "n":
+    room_kitchen()
+  elif answer == "e":
+    room_kitchenstorage()
+  elif answer == "s":
+    room_sleepingquarter
+  elif answer == "q":
+    print("Thanks for playing!")
+    exit()
+  else:
+    print("That is not an option. Try again.")
+    room_northhall()
 def room_easthall():
-  print("east")
+  print("You are standing in the East Hall.")
+  time.sleep(2)
+  print("This hall seems to be a dead end.")
+  time.sleep(2)
+  print("You spot the words '바보' written on the wall. You take a closer look and notice it has been written with blood.")
+  time.sleep(3)
+  print("Where do you want to go?")
+  print("Type: 'w'(sleeping quarters)")
+  answer = input()
+  if answer == "w":
+    room_sleepingquarter()
+  else:
+    print("That is not an option. Try again.")
+    room_easthall()
 def room_southhall():
   print("south")
 def room_westhall():
   print("west")
 
 def room_sleepingquarter():
-  print("You are in standing in the sleeping quarters.")
+  print("You are standing in the sleeping quarters.")
   if "flashlight" in inventory:
     time.sleep(2)
   else:
@@ -123,12 +157,8 @@ def room_sleepingquarter():
   elif answer == 'w':
     if "flashlight" in inventory:
       room_westhall()
-    else:
-      print("The hallway looks way to dark, you can't go in without a form of light.")
-      time.sleep(2)
-      room_sleepingquarter()
   else:
-    print("That is not an option.")
+    print("That is not an option. Try again.")
     room_sleepingquarter()
 
 room_sleepingquarter()
