@@ -5,8 +5,11 @@ import time
 print("Hi, what's your name?")
 name = input()
 print("Hello", (name + '.'))
-
-time.sleep(2)
+possible_answers = ('y', 'n')
+while input() in possible_answers:
+  print('hello')
+else:
+  print("not an option")
 
 
 
@@ -34,4 +37,31 @@ else:
 time.sleep(3)
 
 #start game
-print("You look around and spot a few beds all with their own night stand. You also notice 4 doors.")
+class game_1:
+  print("You look around and spot a few beds all with their own night stand. You also notice 4 doors.")
+time.sleep(1)
+print("You find a flashlight on one of the night stands. Do you want to pick up the flashlight?")
+print("type: 'y' or 'n'")
+answer = input()
+if len(answer) > 1:
+  print("Error! Only 1 characters allowed!")
+  time.sleep(1)
+  exit()  
+elif answer == "n":
+  print("Are you sure?")
+  print("type: 'y' or 'n'")
+answer = input()
+if len(answer) > 1:
+  print("Error! Only 1 characters allowed!")
+  time.sleep(1)
+  exit()
+elif answer == "n":
+  print("You picked up the flashlight this time")
+  time.sleep(1)
+elif answer == "y":
+ print("to bad")
+ exit()
+elif answer == "y":
+  response = "You picked up a flashlight."
+  time.sleep(1)
+  print(response)
