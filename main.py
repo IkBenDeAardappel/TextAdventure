@@ -19,8 +19,10 @@ def code():
     print("That is not an option. Try again.") 
     time.sleep(2)
     room_ladder()
+
 def addToInventory(item):
     inventory.append(item)
+
 def starterFlashlight():
     print("Do you want to pick up the flashlight?")
     print("type: 'y' or 'n'")
@@ -57,6 +59,7 @@ def starterFlashlight():
           time.sleep(2)
           starterFlashlight()
           time.sleep(2)
+
 def headBump():
     print("Where do you want to go?")
     print("Type: 'w'(sleeping quarters), 'e' (or 'q' to quit).")
@@ -75,6 +78,7 @@ def headBump():
         exit()
     else:
         print("That is not an option. Try again.")
+
 def room_control():
   print("You are standing in what seems to be some sort of control room.")
   time.sleep(4)
@@ -100,6 +104,7 @@ def room_control():
     print("That is not an option. Try again.")
     time.sleep(2)
     room_control()
+
 def starterKnife():
   print("You spot a knife on one of the kitchen counters.")
   time.sleep(3)
@@ -122,6 +127,7 @@ def starterKnife():
     time.sleep(2)
     starterKnife()
     time.sleep(2)
+
 def room_kitchen():
   print("You are standing in the Kitchen. It smells like rotten meat.")
   time.sleep(4)
@@ -143,6 +149,7 @@ def room_kitchen():
   else:
     print("That is not an option. Try again.")
     room_kitchen()
+
 def room_kitchenstorage():
   print("You are standing in the Kitchen Storage.")
   time.sleep(3)
@@ -184,6 +191,7 @@ def room_kitchenstorage():
     print("That is not an option. Try again.")
     time.sleep(1)
     room_kitchenstorage()
+
 def room_ladder():
   print("You enter a  small room. The only thing in this room is a ladder going up.")
   time.sleep(3)
@@ -212,6 +220,7 @@ def room_ladder():
     print("That is not an option. Try again.")
     time.sleep(3)
     room_ladder()
+
 def room_forest():
   print("You open the hatch. It is night time.")
   time.sleep(3)
@@ -226,6 +235,7 @@ def room_forest():
   print("But did you really?....")
   time.sleep(2)
   exit()
+
 def room_northhall():
     print("As you open the door, you can see a bunch of centipedes run away towards the darkness...")
     time.sleep(4)
@@ -250,6 +260,7 @@ def room_northhall():
     else:
         print("That is not an option. Try again.")
         room_northhall()
+
 def room_easthall():
   print("You are standing in the East Hall.")
   time.sleep(2)
@@ -276,6 +287,7 @@ def room_easthall():
   else:
     print("That is not an option. Try again.")
     room_easthall()
+
 def askKnife():
   if "knife" in inventory:
     room_southhall()
@@ -292,6 +304,7 @@ def askKnife():
       exit()
     elif answer == "n":
       room_sleepingquarter()
+
 def killMonster():
   print("You are standing in the South Hall.")
   time.sleep(3)
@@ -301,6 +314,7 @@ def killMonster():
   print("You now have Monster Meat in your inventory.")
   time.sleep(3)
   room_southhall()
+
 def room_southhall():
   if "MonsterMeat" in inventory:
     print("You are standing in the South Hall. You see the lifeless body of the monster on the ground. It smells.")
@@ -325,6 +339,7 @@ def room_southhall():
       room_southhall()
   else:
     killMonster()
+
 def room_westhall():
     print("You are standing in the West Hall.")
     time.sleep(3)
@@ -354,6 +369,7 @@ def room_westhall():
     else:
       print("That is not an option. Try again.")
       room_westhall()
+
 def room_introsleepingquarter():
     print("You are standing in the sleeping quarters.")
     time.sleep(3)
@@ -403,6 +419,7 @@ def room_introsleepingquarter():
     else:
         print("That is not an option. Try again.")
         room_sleepingquarter()
+
 def room_sleepingquarter():
   print("You are standing in the sleeping quarters.")
   if "flashlight" in inventory:
@@ -470,6 +487,7 @@ def room_sleepingquarter():
   else:
       print("That is not an option. Try again.")
       room_sleepingquarter()
+
 def room_storage():
   print("You enter a storage room. You cough as you inhale a wave of rotten meat.")
   time.sleep(5)
