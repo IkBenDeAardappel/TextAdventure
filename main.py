@@ -136,6 +136,10 @@ def room_kitchen():
     print("Thanks for playing!")
     time.sleep(1)
     exit()
+  elif answer == "i":
+    print(inventory)
+    time.sleep(3)
+    room_kitchen()
   else:
     print("That is not an option. Try again.")
     room_kitchen()
@@ -384,6 +388,18 @@ def room_introsleepingquarter():
     elif answer == 'w':
         if "flashlight" in inventory:
             room_westhall()
+        else:
+            print("The hallway looks way to dark, you can't go in without a form of light.")
+            time.sleep(4)
+            room_sleepingquarter()
+    elif answer == "q":
+      print("Thanks for playing!")
+      time.sleep(1)
+      exit()
+    elif answer == "i":
+      print(inventory)
+      time.sleep(3)
+      room_sleepingquarter()
     else:
         print("That is not an option. Try again.")
         room_sleepingquarter()
@@ -440,6 +456,18 @@ def room_sleepingquarter():
     if "flashlight" in inventory:
       room_westhall()
     else:
+      print("The hallway looks way to dark, you can't go in without a form of light.")
+      time.sleep(4)
+      room_sleepingquarter()      
+  elif answer == "q":
+      print("Thanks for playing!")
+      time.sleep(1)
+      exit()
+  elif answer == "i":
+      print(inventory)
+      time.sleep(3)
+      room_sleepingquarter()
+  else:
       print("That is not an option. Try again.")
       room_sleepingquarter()
 def room_storage():
